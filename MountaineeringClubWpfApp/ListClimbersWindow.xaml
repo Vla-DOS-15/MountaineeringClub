@@ -1,0 +1,25 @@
+﻿<Window x:Class="MountaineeringClubWpfApp.ListClimbersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MountaineeringClubWpfApp"
+        mc:Ignorable="d"
+        Title="ListClimbersWindow" Height="450" Width="486">
+    <Grid>
+        <DataGrid x:Name="dataGrid" ColumnWidth="*" AutoGenerateColumns="False" Margin="10,0,10,0" Height="261" VerticalAlignment="Center">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Альпініст" Binding="{Binding Group.Mountaineers.FullNameMountaineer}"/>
+                <DataGridTextColumn Header="Дата сходження" Binding="{Binding DateBeginningAscent}"/>
+                <DataGridTextColumn Header="Дата завершення" Binding="{Binding DateCompletionAscent}"/>
+
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label x:Name="label" Content="Дата сходження" HorizontalAlignment="Left" Margin="33,10,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="Дата завершення" HorizontalAlignment="Left" Margin="157,10,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePickerStart" HorizontalAlignment="Left" Margin="33,41,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:Name="datePickerEnd" HorizontalAlignment="Left" Margin="157,41,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnShowList" Content="Показати" HorizontalAlignment="Left" Margin="279,23,0,0" VerticalAlignment="Top" Click="btnShowList_Click" Height="42" Width="85"/>
+        <Button x:Name="btnClose" Content="Закрити" HorizontalAlignment="Left" Margin="391,23,0,0" VerticalAlignment="Top" Height="42" Width="71" Click="btnClose_Click"/>
+    </Grid>
+</Window>
