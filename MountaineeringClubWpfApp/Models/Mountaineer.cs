@@ -15,7 +15,5 @@ namespace MountaineeringClubWpfApp.Models
         public int GroupId { get; set; }
         [ForeignKey("GroupId")]
         public Group Group { get; set; }
-        //public virtual ICollection<Group> Groups { get; set; }
-
     }
 }

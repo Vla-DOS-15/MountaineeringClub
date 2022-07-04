@@ -48,16 +48,6 @@ namespace MountaineeringClubWpfApp
             }
         }
 
-        private void btn_UpdateClient_Click_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void btnShowListGroup_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void btnShowListGroup_Click_1(object sender, RoutedEventArgs e)
         {
             try

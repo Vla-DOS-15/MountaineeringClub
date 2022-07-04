@@ -56,7 +56,7 @@ namespace MountaineeringClubWpfApp
                     db.Mountains.Load();
                     db.Mountaineers.Load();
                     db.MountaineeringClubs.Load();
-                    dataGrid.ItemsSource = db.MountaineeringClubs.Include(x => x.Group).Include(x => x.Group.Mountaineers).Where(x => x.IsCarriedOutAscent == true && x.DateBeginningAscent > DateTime.Parse(datePickerStart.Text) && x.DateCompletionAscent < DateTime.Parse(datePickerEnd.Text)).ToList();
+                    dataGrid.ItemsSource = db.MountaineeringClubs.Include(x => x.Group).Include(x => x.Group.Mountaineer).Where(x => x.IsCarriedOutAscent == true && x.DateBeginningAscent > DateTime.Parse(datePickerStart.Text) && x.DateCompletionAscent < DateTime.Parse(datePickerEnd.Text)).ToList();
                 }
             }
             catch (Exception ex)

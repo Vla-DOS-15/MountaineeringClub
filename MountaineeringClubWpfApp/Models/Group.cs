@@ -11,11 +11,8 @@ namespace MountaineeringClubWpfApp.Models
     {
         [System.ComponentModel.DataAnnotations.Key]
         public int IdGroup { get; set; }
-        public ICollection<Mountaineer> Mountaineers { get; set; }
+        public Mountaineer Mountaineer { get; set; }
         public string NameGroup { get; set; }
-        //public int MountaineerId { get; set; }
-        //[ForeignKey("MountaineerId")]
-        //public Mountaineer Mountaineer { get; set; }
         public virtual ICollection<MountaineeringClub> MountaineeringClubs { get; set; }
 
     }
